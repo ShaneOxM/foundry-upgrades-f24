@@ -13,7 +13,7 @@ This project demonstrates the implementation of upgradable smart contracts using
 Before you begin, ensure you have installed:
 
 - [Node.js](https://nodejs.org/)
-- [Foundry](https://getfoundry.sh/), a smart contract development toolchain.
+- [Foundry](https://getfoundry.sh/)
 
 ## Getting Started
 
