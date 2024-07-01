@@ -1,66 +1,73 @@
-## Foundry
+# Upgradable Smart Contracts Example
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project demonstrates the implementation of upgradable smart contracts using the OpenZeppelin Contracts Upgradeable repository. It serves as a practical example for developers looking to understand and apply upgradeable patterns in their Ethereum smart contracts to ensure future-proofing and flexibility in their blockchain applications.
 
-Foundry consists of:
+## Features
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- Utilizes OpenZeppelin's upgradeable contracts for secure, future-proof smart contract development.
+- Includes example scripts for deploying and interacting with smart contracts on Ethereum.
+- Provides a foundation for building complex, upgradeable systems on the blockchain.
 
-## Documentation
+## Prerequisites
 
-https://book.getfoundry.sh/
+Before you begin, ensure you have installed:
+
+- [Node.js](https://nodejs.org/)
+- [Foundry](https://getfoundry.sh/), a smart contract development toolchain.
+
+## Getting Started
+
+1. Clone the repository:
+   ```shell
+   git clone <repository-url>
+
+2. Install Dependencies:
+    ```shell
+    npm install
+
+3. Compile the Smart Contracts:
+    ```shell
+    forge build
 
 ## Usage
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
 ### Anvil
 
+Start a local Ethereum node for testing. Anvil is a local Ethereum node designed for development, making it easy to deploy contracts and run tests:
+
 ```shell
-$ anvil
+anvil
 ```
 
 ### Deploy
 
+Deploy the example `Counter` smart contract to a live network. This command uses the `forge` CLI to run a deployment script located in the `script` directory:
+
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
 
 ### Cast
 
+Interact with deployed contracts using `cast`. `Cast` is a Swiss Army knife for Ethereum developers, allowing you to query and interact with the blockchain:
+
 ```shell
-$ cast <subcommand>
+cast <subcommand>
 ```
 
 ### Help
 
+For more information on the commands and their options, use the `--help` flag:
+
 ```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge --help
+anvil --help
+cast --help
 ```
+
+### Credits 
+
+This project was guided by the work of Cyfrin Updraft. For more information and resources, visit the original repository:
+
+[Foundry-Full-Course](https://github.com/Cyfrin/foundry-full-course-cu)
+
